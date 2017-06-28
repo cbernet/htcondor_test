@@ -1,0 +1,19 @@
+executable              = mkdirs.py
+output                  = output/toy.$(ClusterId).$(ProcId).out
+error                   = error/toy.$(ClusterId).$(ProcId).err
+log                     = log/toy.$(ClusterId).log
+getenv                  = True 
+
+should_transfer_files   = YES
+when_to_transfer_output = ON_EXIT
+transfer_output_files   = output_$(ClusterId)_$(ProcId)
+ 
++JobFlavour = "espresso"
+
+arguments               = $(ClusterId) $(ProcId) a
+queue
+
+arguments               = $(ClusterId) $(ProcId) b
+queue
+
+
