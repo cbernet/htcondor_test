@@ -9,6 +9,7 @@ when_to_transfer_output = ON_EXIT
 transfer_output_files   = output_$(ClusterId)_$(ProcId)
  
 +JobFlavour = "espresso"
++AccountingGroup = "group_u_FCC.local_gen"
 
 arguments               = $(ClusterId) $(ProcId) a
 queue
