@@ -1,6 +1,11 @@
 # htcondor_test
 testing htcondor at cern
 
+Make sure to initialize the FCC software stack in the usual way, for the latest version of the software.
+e.g.:
+
+    source /cvmfs/fcc.cern.ch/sw/0.8.1/init_fcc_stack.sh
+
 submit:
 
     condor_submit multiple.sub
